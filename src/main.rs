@@ -33,7 +33,7 @@ fn interaction_backup_create() {
         std::io::stdin().read_line(&mut input).unwrap();
 
         match input.trim() {
-            i if i.is_empty() => break,
+            "" => break,
             i if i.chars().all(|c| c.is_ascii_digit()) => {
                 let index: usize = i.parse().unwrap();
 
@@ -66,7 +66,7 @@ fn interaction_backup_load() {
         std::io::stdin().read_line(&mut input).unwrap();
 
         match input.trim() {
-            i if i.is_empty() => break,
+            "" => break,
             i if i.chars().all(|c| c.is_ascii_digit()) => {
                 let index: usize = i.parse().unwrap();
 
